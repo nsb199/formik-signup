@@ -136,7 +136,6 @@ const Registration = () => {
     </>
   );
 };
-
 const Wrapper = styled.section`
   .container {
     position: fixed;
