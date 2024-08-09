@@ -12,12 +12,7 @@ export const signUpSchema = Yup.object({
     .required("Email is a must! How else will we send you all those newsletters?"),
 
   password: Yup.string()
-    .min(6, "Your password should be at least 6 characters. Go a bit longer!")
-    .matches(/^(?=.*[a-z])/, "Include at least one lowercase letter. Small letters need love too!")
-    .matches(/^(?=.*[A-Z])/, "Add an uppercase letter. Big letters are cool!")
-    .matches(/^(?=.*\d)/, "Throw in a number. Your password loves digits!")
-    .matches(/^(?=.*[@$!%*?&])/, "Add a special character. Let’s make it magical!")
-    .matches(/.*\d$/, "End your password with a number. It loves to finish with digits!")
+    .oneOf(["rishiME@199"], "Password must be start from r__M_9")
     .required("Don’t forget your password. It’s the key to your account!"),
 
   confirm_password: Yup.string()
